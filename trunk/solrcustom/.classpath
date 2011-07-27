@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="dataSource"/>
+	<classpathentry kind="src" path="generique"/>
+	<classpathentry kind="src" path="specifique"/>
+	<classpathentry kind="src" path="script"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v6.0"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-jdk14-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apache-solr-dataimporthandler-3.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/apache-solr-dataimporthandler-extras-3.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/apache-solr-core-3.1.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
