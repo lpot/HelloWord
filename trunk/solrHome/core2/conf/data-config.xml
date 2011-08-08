@@ -6,6 +6,8 @@
 				pk="EQUIPEMENT_CODE"
 				query="	SELECT 	EQUIPEMENT_CODE, 
 								SEDOVAFFICHEEQUIPEMENT(EQUIPEMENT_CODE) EQUIPEMENT_AFFICHAGE,
+								EQUIPEMENT_PARENT_CODE, 
+								SEDOVAFFICHEEQUIPEMENT(EQUIPEMENT_PARENT_CODE) EQUIPEMENT_PARENT_AFFICHAGE,
 								E.CDR_CODE CDR_CODE, 
 								E.MODEQUIPVERSION_CODE MODEQUIPVERSION_CODE,
 								M.MODEQUIP_CODEXT MODEQUIP_CODEXT,
@@ -31,24 +33,24 @@
 				
 		>
 		
-			<!-- OK -->
+			
 			<field column="EQUIPEMENT_CODE" name="EQUIPEMENT_CODE" />
 			<field column="EQUIPEMENT_AFFICHAGE" name="EQUIPEMENT_AFFICHAGE" />
 			
-			<!-- OK -->
+			<field column="EQUIPEMENT_PARENT_CODE" name="EQUIPEMENT_PARENT_CODE" />
+			<field column="EQUIPEMENT_PARENT_AFFICHAGE" name="EQUIPEMENT_PARENT_AFFICHAGE" />
+			
 			<field column="CDR_CODE" name="CDR_CODE" />
 			
-			<!-- OK -->
+			
 			<field column="MODEQUIPVERSION_CODE" name="MODEQUIPVERSION_CODE" />
-			<!-- OK -->
 			<field column="MODEQUIPVERSION_NUMERO" name="MODEQUIPVERSION_NUMERO" />
 			
-			<!-- OK -->
+			
 			<field column="MODEQUIP_CODEXT" name="MODEQUIP_CODEXT" />
-			<!-- OK -->
 			<field column="MODEQUIP_LIB" name="MODEQUIP_LIB" />
 						
-			<!-- OK -->
+			
 			<field column="ETAEQUIPEMENT_CODE" name="ETAEQUIPEMENT_CODE" />
 			<field column="ETAEQUIPEMENT_LIB" name="ETAEQUIPEMENT_LIB" />
 			<field column="ETAEQUIPEMENT_ORDRE" name="ETAEQUIPEMENT_ORDRE" />

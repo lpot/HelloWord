@@ -454,6 +454,9 @@
 		<field name="EQUIPEMENT_CODE" type="text_fr" indexed="true" stored="true" />
 		<field name="EQUIPEMENT_AFFICHAGE" type="text_fr" indexed="true" stored="true" />
 		
+		<field name="EQUIPEMENT_PARENT_CODE" type="text_fr" indexed="true" stored="true" />
+		<field name="EQUIPEMENT_PARENT_AFFICHAGE" type="text_fr" indexed="true" stored="true" />
+		
 		<field name="CDR_CODE" type="text_fr" indexed="true" stored="true" />
 		<field name="CDR_LIB" type="text_fr" indexed="true" stored="true" />
 		
