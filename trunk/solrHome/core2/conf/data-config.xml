@@ -1,5 +1,6 @@
 ﻿<dataConfig>
-<dataSource type="CGenericJdbcDataSource" driver="oracle.jdbc.driver.OracleDriver" url="jdbc:oracle:thin:@@db.oracle_host@:@db.oracle_port@:@db.oracle_sid@" user="@db.oracle_username@" password="@db.oracle_password@"/>
+<!-- <dataSource type="CGenericJdbcDataSource" driver="oracle.jdbc.driver.OracleDriver" url="jdbc:oracle:thin:@gdasrv05:1542:NCLIENT6" user="GA_ADM" password="GA_ADM"/> -->
+<dataSource type="CGenericJdbcDataSource" driver="oracle.jdbc.driver.OracleDriver" url="@oracle.jdbc.url@" user="@db.oracle_username@" password="@db.oracle_password@"/>
 	<document onImportStart="com.unilog.gda.solr.generique.eventListener.CGenericDebutImportationEventListener" onImportEnd="com.unilog.gda.solr.generique.eventListener.CGenericFinImportationEventListener"> 	
 		<entity processor="com.unilog.gda.solr.specifique.process.gmao.CGmaoEquipementProcessor" 
 				name="nom" 
