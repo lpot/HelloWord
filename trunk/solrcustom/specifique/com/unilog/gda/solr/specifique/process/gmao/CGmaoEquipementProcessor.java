@@ -50,6 +50,7 @@ public class CGmaoEquipementProcessor extends CGenericElementProcessor{
         Map<String, Object> oMap3;
         Map<String, Object> oMapHasart;
         Map<String, Object> oMapHalivr;
+        Map<String, Object> oMapHalivrAffect;
         Map<String, Object> oMapProtocoles;
         Map<String, Object> oMapEltpats;
         Map<String, Object> oMapCompteurs;
@@ -247,19 +248,39 @@ public class CGmaoEquipementProcessor extends CGenericElementProcessor{
             //maj HALIVR
             CGenericJdbcDataSource oDataSourceHalivr = (CGenericJdbcDataSource) context.getDataSource("dataSourceHalivr");
             
-            Iterator<Map<String, Object>> resultSelectHalivr = oDataSourceHalivr.getData("SELECT HALIVR_LIB " +
+            Iterator<Map<String, Object>> resultSelectHalivr = oDataSourceHalivr.getData("SELECT HALIVR_CODEXT, HALIVR_LIB " +
             		                                       "FROM HALIVR H, EQUIPEMENT E " +
             		                                       "WHERE "+oCode+" = E.EQUIPEMENT_CODE " +
             		                                       "AND E.HALIVR_CODE = H.HALIVR_CODE");
             
             if(resultSelectHalivr.hasNext()) {
                 oMapHalivr = resultSelectHalivr.next();
+                String sHalivrCodext = (String) oMapHalivr.get("HALIVR_CODEXT");
+                oRes.put("HALIVR_CODEXT", sHalivrCodext);
                 String sHalivrLib = (String) oMapHalivr.get("HALIVR_LIB");
                 oRes.put("HALIVR_LIB", sHalivrLib);
             }
             
             oDataSourceHalivr.close();
             
+            //maj HALIVR_AFFECT
+            CGenericJdbcDataSource oDataSourceHalivrAffect = (CGenericJdbcDataSource) context.getDataSource("dataSourceHalivr");
+            
+            Iterator<Map<String, Object>> resultSelectHalivrAffect = oDataSourceHalivrAffect.getData("SELECT HALIVR_CODEXT, HALIVR_LIB " +
+            		                                       "FROM HALIVR H, EQUIPEMENT E " +
+            		                                       "WHERE "+oCode+" = E.EQUIPEMENT_CODE " +
+            		                                       "AND E.HALIVR_AFFECT_CODE = H.HALIVR_CODE");
+            
+            if(resultSelectHalivrAffect.hasNext()) {
+                oMapHalivrAffect = resultSelectHalivrAffect.next();
+                String sHalivrCodext = (String) oMapHalivrAffect.get("HALIVR_CODEXT");
+                oRes.put("HALIVR_AFFECT_CODEXT", sHalivrCodext);
+                String sHalivrLib = (String) oMapHalivrAffect.get("HALIVR_LIB");
+                oRes.put("HALIVR_AFFECT_LIB", sHalivrLib);
+            }
+            
+            oDataSourceHalivrAffect.close();
+
             //maj HASART
             CGenericJdbcDataSource oDataSourceHasart = (CGenericJdbcDataSource) context.getDataSource("dataSourceHasart");
             

@@ -460,7 +460,10 @@
 		<field name="CDR_CODE" type="text_fr" indexed="true" stored="true" />
 		<field name="CDR_LIB" type="text_fr" indexed="true" stored="true" />
 		
+		<field name="HALIVR_CODEXT" type="text_fr" indexed="true" stored="true" />
 		<field name="HALIVR_LIB" type="text_fr" indexed="true" stored="true" />
+		<field name="HALIVR_AFFECT_CODEXT" type="text_fr" indexed="true" stored="true" />
+		<field name="HALIVR_AFFECT_LIB" type="text_fr" indexed="true" stored="true" />
 		
 		<field name="HASART_LIB" type="text_fr" indexed="true" stored="true" />
 			
@@ -509,7 +512,10 @@
 	<copyField source="CDR_LIB" dest="text_fr"/>
 	<copyField source="CDR_CODE" dest="text_fr"/>
 	<copyField source="HASART_LIB" dest="text_fr"/>
+	<copyField source="HALIVR_CODEXT" dest="text_fr"/>
 	<copyField source="HALIVR_LIB" dest="text_fr"/>
+	<copyField source="HALIVR_AFFECT_CODEXT" dest="text_fr"/>
+	<copyField source="HALIVR_AFFECT_LIB" dest="text_fr"/>
 	<copyField source="MODEQUIPVERSION_CODE" dest="text_fr"/>
 	<copyField source="MODEQUIPVERSION_NUMERO" dest="text_fr"/>
 	<copyField source="MODEQUIP_CODEXT" dest="text_fr"/>
