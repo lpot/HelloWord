@@ -269,7 +269,7 @@ public class CGmaoEquipementProcessor extends CGenericElementProcessor{
             Iterator<Map<String, Object>> resultSelectHalivrAffect = oDataSourceHalivrAffect.getData("SELECT HALIVR_CODEXT, HALIVR_LIB " +
             		                                       "FROM HALIVR H, EQUIPEMENT E " +
             		                                       "WHERE "+oCode+" = E.EQUIPEMENT_CODE " +
-            		                                       "AND E.HALIVR_AFFECT_CODE = H.HALIVR_CODE");
+            		                                       "AND E.HALIVR_CODEAFFECT = H.HALIVR_CODE");
             
             if(resultSelectHalivrAffect.hasNext()) {
                 oMapHalivrAffect = resultSelectHalivrAffect.next();
